@@ -12,7 +12,7 @@ public class Index {
                     StringBuilder sb = new StringBuilder(tmp);
                     sb.setCharAt(i,c);
                     tmp = sb.toString();
-                    if(dictionary.contains(tmp)&&tmp.equals(curWord)){
+                    if(dictionary.contains(tmp)&&!tmp.equals(curWord)){
                         curWordIndex.add(tmp);
                     }
                 }

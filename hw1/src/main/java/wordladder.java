@@ -2,11 +2,11 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.Stack;
 
-public class WordLadder {
+public class wordladder {
     public static void main(String[] args) {
         DictionaryReader dReader = new DictionaryReader();
         System.out.println("Reading dictionary...");
-        Set<String> dictionary = dReader.read("EnglishWords.txt");
+        Set<String> dictionary = dReader.read("D:\\学习\\backend\\hw1\\src\\main\\resources\\EnglishWords.txt");
         System.out.println("Done");
         System.out.println("Building the index...");
         Index wordIndex = new Index(dictionary);
@@ -26,10 +26,13 @@ public class WordLadder {
             }
             Stack<String> stack = lb.build(startWord,endWord,wordIndex);
             if(!stack.isEmpty()){
-                for(String str:stack){
-                    if(str.equals(startWord)) continue;
-                    System.out.print( "->" + str);
+                System.out.print(startWord);
+                while(!stack.isEmpty()){
+                    String tmp = stack.pop();
+                    if(tmp.equals(startWord)) continue;
+                    System.out.print( "->" + tmp);
                 }
+                System.out.println();
             }
             else {
                 System.out.print("Not found!");
