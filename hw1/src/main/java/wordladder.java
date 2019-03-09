@@ -6,7 +6,7 @@ public class wordladder {
     public static void main(String[] args) {
         DictionaryReader dReader = new DictionaryReader();
         System.out.println("Reading dictionary...");
-        Set<String> dictionary = dReader.read("D:\\学习\\backend\\hw1\\src\\main\\resources\\EnglishWords.txt");
+        Set<String> dictionary = dReader.read("EnglishWords.txt");
         System.out.println("Done");
         System.out.println("Building the index...");
         Index wordIndex = new Index(dictionary);
