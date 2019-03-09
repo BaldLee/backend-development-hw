@@ -4,9 +4,7 @@ public class Index {
     private Map<String,Set<String>> wordIndex;
     public Index(Set<String> dictionary){
         wordIndex = new HashMap<String, Set<String>>();
-        Iterator<String> it = dictionary.iterator();
-        while(it.hasNext()){
-            String curWord = it.next();
+        for(String curWord:dictionary){
             Set<String> curWordIndex = new HashSet<String>();
             for(int i=0;i<curWord.length();i++){
                 String tmp = curWord;
@@ -23,7 +21,7 @@ public class Index {
         }
     }
 
-    public Set<String> seach(String input){
+    public Set<String> search(String input){
         Set<String> result=new HashSet<String>();
         if(wordIndex.containsKey(input)){
             result = wordIndex.get(input);
