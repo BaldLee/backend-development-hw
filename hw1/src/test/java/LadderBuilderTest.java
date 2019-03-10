@@ -1,5 +1,4 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.Set;
 import java.util.Stack;
@@ -22,6 +21,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test1")
     public void test1(){
 
         expected.clear();
@@ -34,6 +34,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test2")
     public void test2(){
 
         expected.clear();
@@ -47,6 +48,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test3")
     public void test3(){
 
         expected.clear();
@@ -59,6 +61,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test4")
     public void test4(){
 
         expected.clear();
@@ -72,6 +75,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test5")
     public void test5(){
 
         expected.clear();
@@ -84,6 +88,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test6")
     public void test6(){
 
         expected.clear();
@@ -108,6 +113,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test7")
     public void test7(){
 
         expected.clear();
@@ -130,6 +136,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test8")
     public void test8(){
 
         expected.clear();
@@ -146,6 +153,7 @@ class LadderBuilderTest {
     }
 
     @Test
+    @DisplayName("test9")
     public void test9(){
 
         expected.clear();

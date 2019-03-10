@@ -2,7 +2,6 @@ import org.junit.jupiter.api.*;
 
 import java.io.*;
 
-
 class wordladderTest {
     private InputStream consoleIn = null;                       // 输入流 (字符设备) consoleIn, 用于还原输出入流
     private PrintStream consoleOut = null;                      // 输出流 (字符设备) consoleOut, 用于还原输出流
