@@ -1,9 +1,10 @@
 import java.util.*;
 
 public class Index {
-    private Map<String,Set<String>> wordIndex;
+    private Map<String,Set<String>> wordIndex = new HashMap<String,Set<String>>();
+
     public Index(Set<String> dictionary){
-        wordIndex = new HashMap<String, Set<String>>();
+        //wordIndex = new HashMap<String, Set<String>>();
         for(String curWord:dictionary){
             Set<String> curWordIndex = new HashSet<String>();
             for(int i=0;i<curWord.length();i++){
@@ -20,6 +21,8 @@ public class Index {
             wordIndex.put(curWord,curWordIndex);
         }
     }
+
+    public Index(){}
 
     public Set<String> search(String input){
         Set<String> result=new HashSet<String>();

@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.io.*;
 
 public class DictionaryReader {
-    public Set<String> read(String fileName){
+    public static Set<String> testRead(String fileName){
         Set<String> result = new HashSet<String>();
         File file = new File(fileName);
         BufferedReader reader = null;
@@ -25,4 +25,9 @@ public class DictionaryReader {
         }
         return result;
     }
+
+    public Set<String> read(String fileName){
+        return this.testRead(fileName);
+    }
+
 }
