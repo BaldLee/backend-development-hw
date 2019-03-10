@@ -1,17 +1,14 @@
-import org.junit.*;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.io.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class wordladderTest {
     private InputStream consoleIn = null;                       // 输入流 (字符设备) consoleIn, 用于还原输出入流
     private PrintStream consoleOut = null;                      // 输出流 (字符设备) consoleOut, 用于还原输出流
     private ByteArrayOutputStream bytes = new ByteArrayOutputStream();                 // 用于缓存 console 重定向过来的字符流
 
-    @Before
+    @BeforeEach
     public void setUp() {
         this.consoleIn = System.in;                     // 获取 System.in 输出流的句柄
         this.consoleOut = System.out;                   // 获取 System.out 输出流的句柄
@@ -47,7 +44,7 @@ class wordladderTest {
         //assertEquals(expected,this.bytes.toString());
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         System.setIn(consoleIn);                        // 还原输入流
         System.setOut(consoleOut);                      // 还原输出流
