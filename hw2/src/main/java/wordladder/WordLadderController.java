@@ -31,8 +31,10 @@ public class WordLadderController {
         return output;
     }
 
-    @RequestMapping("/login")
-    public String login() {
-        return "redirect:/src/main/resources/templates/login.html";
+    @RequestMapping("/admin")
+    public String admin() {
+        String output = "You are admin.";
+        output = JSON.toJSONString(output);
+        return output;
     }
 }
