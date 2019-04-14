@@ -3,7 +3,7 @@
 This program is used to find a route between the given start word and end word. Every step of the route changes only one letter.
 > for example:
 >
-> http://localhost:8080/wladder?startword=cat&endword=log
+> http://localhost:8082/wladder?startword=cat&endword=log
 >
 > cat->cot->lot->log
 ## How to run
@@ -14,13 +14,13 @@ It's recommended to run the project on Intellij Idea.
 3. Run/Debug Configurations -> Add new comfiguration -> Spring boot
 4. the main class choose "wordladder.Application"
 5. Run 'wordladder'(Shift+F10)
-6. then you can access the server on 'localhost:8080/wladder'
+6. then you can access the server on 'localhost:8082/wladder'
 ## How to use
 Make sure the Spring boot is running.  
 Two parameters of the method:'startword' and 'endword'.  
 You can pass the parameter by
 ```
-localhost:8080/wladder?startword=[the start word]&endword=[the end word]
+localhost:8082/wladder?startword=[the start word]&endword=[the end word]
 ```
 The default value is: startword = 'cat', endword = 'dog'.  
 The response is a string in format like  
@@ -28,3 +28,30 @@ The response is a string in format like
 
 The default output:
 >cat -> cat -> cot -> dot -> dog
+## Authorization
+You cannot access "/wladder" unless you've log in as a user or admin.  
+You cannot access "/admin" unless you've log in as a admin.  
+Anyone can access "/".
+ 
+You can login with basic auth.
+
+> USER:  
+> username: user   
+> password: user
+>   
+> AMDIN:  
+> username: admin  
+> password: admin  
+
+## Actuator
+You can access actuator with role by
+
+> localhost:8082/actuator/info
+
+All spring actuator apis are allowed:
+
+> localhost:8082/actuator/health  
+> localhost:8082/actuator/beans  
+> localhost:8082/actuator/autoconfig  
+> localhost:8082/actuator/metrics  
+> and so on ...
