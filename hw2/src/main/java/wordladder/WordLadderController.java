@@ -15,15 +15,11 @@ public class WordLadderController {
                           @RequestParam(value = "endword", defaultValue = "dog") String endword){
         WordLadder wl = new WordLadder(startword,endword);
         Stack<String> result = wl.getLadder();
-        String output = startword;
+        String output = new String();
         ArrayList<String> strList = new ArrayList<String>();
         while(!result.isEmpty()){
             strList.add(result.pop());
         }
-        /*while(!result.isEmpty()){
-            String tmp = result.pop();
-            output += " -> "+tmp;
-        }*/
         output = JSON.toJSONString(strList);
         return output;
     }
