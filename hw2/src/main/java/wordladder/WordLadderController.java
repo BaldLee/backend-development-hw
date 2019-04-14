@@ -10,6 +10,13 @@ import java.util.Stack;
 
 @RestController
 public class WordLadderController {
+    @RequestMapping("/")
+    public String index() {
+        String output = "Welcome to wordladder";
+        output = JSON.toJSONString(output);
+        return output;
+    }
+
     @RequestMapping("/wladder")
     public String wladder(@RequestParam(value = "startword", defaultValue = "cat") String startword,
                           @RequestParam(value = "endword", defaultValue = "dog") String endword){
@@ -22,5 +29,10 @@ public class WordLadderController {
         }
         output = JSON.toJSONString(strList);
         return output;
+    }
+
+    @RequestMapping("/login")
+    public String login() {
+        return "redirect:/src/main/resources/templates/login.html";
     }
 }
