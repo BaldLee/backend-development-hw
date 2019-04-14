@@ -31,11 +31,6 @@ public class WordLadderController {
         return output;
     }
 
-    @RequestMapping("/login")
-    public String login() {
-        return "login";
-    }
-
     @RequestMapping("/admin")
     public String admin() {
         String output = "You are admin.";
