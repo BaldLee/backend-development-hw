@@ -7,7 +7,7 @@ import java.io.*;
 public class DictionaryReader {
     public static Set<String> testRead(String fileName){
         Set<String> result = new HashSet<String>();
-        File file = new File("./src/main/resources/"+fileName);
+        File file = new File("./"+fileName);
         BufferedReader reader = null;
         try{
             reader = new BufferedReader(new FileReader(file));
