@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.sjtu.edu</groupId>
-    <artifactId>spring.wordladder</artifactId>
+    <artifactId>spring.login</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <parent>
@@ -49,15 +49,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.security</groupId>-->
-        <!--            <artifactId>spring-security-test</artifactId>-->
-        <!--            <scope>test</scope>-->
-        <!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -66,32 +57,8 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.11</version>
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>build-image</id>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>build</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            &lt;!&ndash;                            <dockerHost>https://192.168.99.100:2376</dockerHost>&ndash;&gt;-->
-<!--                            &lt;!&ndash;                            <dockerCertPath>"C:\Users\13515\.docker\machine\machines\default</dockerCertPath>&ndash;&gt;-->
-<!--                            <dockerDirectory>D:\学习\backend\hw3\wordladder\src\main\docker\Dockerfile</dockerDirectory>-->
-<!--                            <imageName>wordladder-microservice</imageName>-->
-<!--                            <resources>-->
-<!--                                <targetPath>/</targetPath>-->
-<!--                                <directory>${project.build.directory}</directory>-->
-<!--                                <include>${project.build.finalName}.jar</include>-->
-<!--                            </resources>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-            </plugin>
         </plugins>
     </build>
+
 
 </project>
