@@ -13,7 +13,7 @@ public class Login {
         String urlString = "";
         String current;
         try {
-            URL url = new URL("http://localhost:8083/login/dologin?username=" + username + "&password=" + password);
+            URL url = new URL("http://172.17.0.2:8083/login/dologin?username=" + username + "&password=" + password);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             BufferedReader in = new BufferedReader(

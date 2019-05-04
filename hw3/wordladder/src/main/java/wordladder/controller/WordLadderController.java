@@ -21,22 +21,6 @@ public class WordLadderController {
     public String index() {
         String output = "Welcome to wordladder";
         return JSON.toJSONString(output);
-//        String urlString = "";
-//        String current;
-//        try {
-//            URL url = new URL("http://localhost:8083/login/dologin?username=user&password=user");
-//            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-//            con.setRequestMethod("GET");
-//            BufferedReader in = new BufferedReader(
-//                    new InputStreamReader(con.getInputStream()));
-//            while((current = in.readLine()) != null)
-//            {
-//                urlString += current;
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return urlString;
     }
 
     @RequestMapping("/build")
