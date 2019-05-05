@@ -1,5 +1,7 @@
 # WordLadder - packaged by docker
 
+## This guide works on linux
+
 ## Get&Run the image
 docker url:  
 > https://hub.docker.com/r/baldlee/wordladder-hw3
@@ -16,12 +18,12 @@ docker run baldlee/login-hw3
 docker run -p 6655:8082 baldlee/wordladder-hw3
 ```
 now you can access the service by
->http://localhost:6655/wordladder
+>http://172.17.0.3:6655/wordladder
 ## Usage
 This program is used to find a route between the given start word and end word. Every step of the route changes only one letter.
 > for example:
 >
-> http://localhost:6655/wordladder/build?startword=cat&endword=log&username=user&password=user
+> http://172.17.0.3:6655/wordladder/build?startword=cat&endword=log&username=user&password=user
 >
 > cat->cot->lot->log
 ## How to run
@@ -32,13 +34,13 @@ It's recommended to run the project on Intellij Idea.
 3. Run/Debug Configurations -> Add new comfiguration -> Spring boot
 4. the main class choose "wordladder.Application"
 5. Run 'wordladder'(Shift+F10)
-6. then you can access the server on 'localhost:6655/wordladder'
+6. then you can access the server on '172.17.0.3:6655/wordladder'
 ## How to use
 Make sure the Spring boot is running.  
 Two parameters of the method:'startword' and 'endword'.  
 You can pass the parameter by
 ```
-localhost:6655/wordladder/build?startword=[the start word]&endword=[the end word]
+172.17.0.3:6655/wordladder/build?startword=[the start word]&endword=[the end word]
 ```
 The default value is: startword = 'cat', endword = 'dog'.  
 The response is a string in format like  
