@@ -37,6 +37,7 @@ public class Container {
             } else {
                 count--;
                 if (count <= threshold) overflow = false;
+                System.out.println("**[CONTAINER]\tpop from stack**");
                 return stack.pop();
             }
         }
@@ -49,6 +50,7 @@ public class Container {
                 count--;
             } else {
                 count--;
+                System.out.println("**[CONTAINER]\tpop from queue**");
                 return queue.remove();
             }
         }
@@ -62,9 +64,11 @@ public class Container {
         if (!overflow) {
             product.setSetTime(System.currentTimeMillis());
             queue.add(product);
+            System.out.println("**[CONTAINER]\tpush into queue**");
         } else {
             product.setSetTime(System.currentTimeMillis());
             stack.push(product);
+            System.out.println("**[CONTAINER]\tpush into stack**");
         }
     }
 }

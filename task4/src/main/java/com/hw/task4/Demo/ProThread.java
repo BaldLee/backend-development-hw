@@ -9,11 +9,11 @@ public class ProThread extends Thread {
     @Override
     public void run() {
         ProducerClient producerClient = new ProducerClient();
-        while (true) {
-            producerClient.sendProduct();
-            //delay 100ms
+        for (int i = 61; i < 300; i++) {
+            producerClient.sendProduct(i);
+            //delay 120ms
             try {
-                Thread.sleep(100);
+                Thread.sleep(120);
             } catch (InterruptedException ex) {
                 Thread.currentThread().interrupt();
             }

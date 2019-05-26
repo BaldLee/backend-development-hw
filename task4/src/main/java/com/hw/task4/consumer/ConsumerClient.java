@@ -7,7 +7,7 @@ public class ConsumerClient {
     public ConsumerClient() {
     }
 
-    public void getProduct() {
+    public void getProduct(int i) {
         try {
             Socket socket = new Socket("127.0.0.1", 55555);
             InputStream is = socket.getInputStream();
@@ -22,7 +22,7 @@ public class ConsumerClient {
 
             //读取服务器端的消息
             String mess = br.readLine();
-            System.out.println("consumer gets product: " + mess);
+            System.out.println("[CONSUMER " + i + "]\tconsumer gets product: " + mess);
 
         } catch (IOException e) {
             e.printStackTrace();

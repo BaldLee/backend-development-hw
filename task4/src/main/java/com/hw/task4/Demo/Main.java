@@ -8,10 +8,10 @@ public class Main {
         ContainerThread containerThread = new ContainerThread();
         containerThread.start();
 
-        //先生产30个
+        //先生产60个
         ProducerClient producerClient = new ProducerClient();
-        for (int i = 0; i < 30; i++) {
-            producerClient.sendProduct();
+        for (int i = 1; i < 61; i++) {
+            producerClient.sendProduct(i);
         }
 
         //运行消费者和生产者
@@ -19,14 +19,5 @@ public class Main {
         ConThread conThread = new ConThread();
         proThread.start();
         conThread.start();
-
-        //运行3秒
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
-
-        return;
     }
 }

@@ -10,8 +10,8 @@ public class ConThread extends Thread {
     @Override
     public void run() {
         ConsumerClient consumerClient = new ConsumerClient();
-        while (true) {
-            consumerClient.getProduct();
+        for (int i = 0; i < 300; i++) {
+            consumerClient.getProduct(i);
             //delay 100ms
             try {
                 Thread.sleep(100);
